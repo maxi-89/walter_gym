@@ -1,6 +1,8 @@
 
 package Ventanas;
-
+//cambiar radiobtn por jtextfield
+//cambiar ftx y cb por jtextfiel
+//crear y conectar a base de datos
 
 public class IngresoClientes extends javax.swing.JFrame {
 
