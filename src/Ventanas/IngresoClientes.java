@@ -24,10 +24,10 @@ public class IngresoClientes extends javax.swing.JFrame {
     txt_alt.setText("");
     txt_peso.setText("");
     txt_obs.setText("");
-    cb_apto.setText("");
-    rbtn_hom.setText("");
-    rbtn_muj.setText("");
-    ftx_fecha.setText("");
+    txt_sex.setText("");
+    txt_fechaingreso.setText("");
+    txt_apto.setText("");
+    
         }
     void bloquear(){
     txt_Nom.setEnabled(false);
@@ -40,10 +40,9 @@ public class IngresoClientes extends javax.swing.JFrame {
     txt_alt.setEnabled(false);
     txt_peso.setEnabled(false);
     txt_obs.setEnabled(false);
-    cb_apto.setEnabled(false);
-    rbtn_hom.setEnabled(false);
-    rbtn_muj.setEnabled(false);
-    ftx_fecha.setEnabled(false);
+    txt_sex.setEnabled(false);
+    txt_fechaingreso.setEnabled(false);
+    txt_apto.setEnabled(false);
     BTN_new.setEnabled(true);
     btn_guardar.setEnabled(false);
     btn_cancelar.setEnabled(false);
@@ -61,10 +60,9 @@ public class IngresoClientes extends javax.swing.JFrame {
     txt_alt.setEnabled(true);
     txt_peso.setEnabled(true);
     txt_obs.setEnabled(true);
-    cb_apto.setEnabled(true);
-    rbtn_hom.setEnabled(true);
-    rbtn_muj.setEnabled(true);
-    ftx_fecha.setEnabled(true);
+    txt_sex.setEnabled(true);
+    txt_fechaingreso.setEnabled(true);
+    txt_apto.setEnabled(true);
     BTN_new.setEnabled(false);
     btn_guardar.setEnabled(true);
     btn_cancelar.setEnabled(true);
@@ -97,18 +95,15 @@ public class IngresoClientes extends javax.swing.JFrame {
         txt_edad = new javax.swing.JTextField();
         txt_alt = new javax.swing.JTextField();
         txt_peso = new javax.swing.JTextField();
-        cb_apto = new javax.swing.JCheckBox();
-        rbtn_hom = new javax.swing.JRadioButton();
-        rbtn_muj = new javax.swing.JRadioButton();
-        ftx_fecha = new javax.swing.JFormattedTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         txt_obs = new javax.swing.JTextArea();
         BTN_new = new javax.swing.JButton();
         btn_guardar = new javax.swing.JButton();
         btn_cancelar = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        txt_apto = new javax.swing.JTextField();
+        txt_sex = new javax.swing.JTextField();
+        txt_fechaingreso = new javax.swing.JTextField();
         jLabelmitre = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -242,37 +237,6 @@ public class IngresoClientes extends javax.swing.JFrame {
         });
         getContentPane().add(txt_peso, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 50, -1));
 
-        cb_apto.setText("si!");
-        cb_apto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cb_aptoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cb_apto, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, -1, -1));
-
-        rbtn_hom.setText("H");
-        rbtn_hom.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtn_homActionPerformed(evt);
-            }
-        });
-        getContentPane().add(rbtn_hom, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, -1, -1));
-
-        rbtn_muj.setText("M");
-        rbtn_muj.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtn_mujActionPerformed(evt);
-            }
-        });
-        getContentPane().add(rbtn_muj, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, -1, -1));
-
-        ftx_fecha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ftx_fechaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ftx_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 110, -1));
-
         txt_obs.setColumns(20);
         txt_obs.setRows(5);
         jScrollPane1.setViewportView(txt_obs);
@@ -301,15 +265,26 @@ public class IngresoClientes extends javax.swing.JFrame {
         btn_salir.setText("SALIR");
         getContentPane().add(btn_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 540, 110, 30));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 255, 0));
-        jLabel1.setText("H");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 20, 20));
+        txt_apto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_aptoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txt_apto, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 60, -1));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 255, 0));
-        jLabel2.setText("M");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, 20, 20));
+        txt_sex.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_sexActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txt_sex, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 90, -1));
+
+        txt_fechaingreso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_fechaingresoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txt_fechaingreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 90, -1));
 
         jLabelmitre.setForeground(new java.awt.Color(51, 255, 0));
         jLabelmitre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/IMG-20190220-WA0136.jpg"))); // NOI18N
@@ -364,21 +339,20 @@ txt_cel.transferFocus();        // TODO add your handling code here:
 txt_edad.transferFocus();        // TODO add your handling code here:
     }//GEN-LAST:event_txt_edadActionPerformed
 
-    private void cb_aptoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_aptoActionPerformed
-cb_apto.transferFocus();        // TODO add your handling code here:
-    }//GEN-LAST:event_cb_aptoActionPerformed
+    private void txt_fechaingresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_fechaingresoActionPerformed
+        txt_fechaingreso.transferFocus();
+// TODO add your handling code here:
+    }//GEN-LAST:event_txt_fechaingresoActionPerformed
 
-    private void rbtn_homActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtn_homActionPerformed
-     rbtn_hom.transferFocus();   // TODO add your handling code here:
-    }//GEN-LAST:event_rbtn_homActionPerformed
+    private void txt_aptoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_aptoActionPerformed
+       txt_apto.transferFocus();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_aptoActionPerformed
 
-    private void rbtn_mujActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtn_mujActionPerformed
-      rbtn_muj.transferFocus();  // TODO add your handling code here:
-    }//GEN-LAST:event_rbtn_mujActionPerformed
-
-    private void ftx_fechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftx_fechaActionPerformed
-       ftx_fecha.transferFocus(); // TODO add your handling code here:
-    }//GEN-LAST:event_ftx_fechaActionPerformed
+    private void txt_sexActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_sexActionPerformed
+        txt_sex.transferFocus();
+// TOtxtDO add your handling code here:
+    }//GEN-LAST:event_txt_sexActionPerformed
 
     /**
      * @param args the command line arguments
@@ -420,10 +394,6 @@ cb_apto.transferFocus();        // TODO add your handling code here:
     private javax.swing.JButton btn_cancelar;
     private javax.swing.JButton btn_guardar;
     private javax.swing.JButton btn_salir;
-    private javax.swing.JCheckBox cb_apto;
-    private javax.swing.JFormattedTextField ftx_fecha;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelAlt;
     private javax.swing.JLabel jLabelApe;
     private javax.swing.JLabel jLabelApto;
@@ -439,17 +409,18 @@ cb_apto.transferFocus();        // TODO add your handling code here:
     private javax.swing.JLabel jLabelTel;
     private javax.swing.JLabel jLabelmitre;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JRadioButton rbtn_hom;
-    private javax.swing.JRadioButton rbtn_muj;
     private javax.swing.JTextField txt_Nom;
     private javax.swing.JTextField txt_alt;
     private javax.swing.JTextField txt_ape;
+    private javax.swing.JTextField txt_apto;
     private javax.swing.JTextField txt_cel;
     private javax.swing.JTextField txt_dir;
     private javax.swing.JTextField txt_edad;
+    private javax.swing.JTextField txt_fechaingreso;
     private javax.swing.JTextField txt_mail;
     private javax.swing.JTextArea txt_obs;
     private javax.swing.JTextField txt_peso;
+    private javax.swing.JTextField txt_sex;
     private javax.swing.JTextField txt_tel;
     // End of variables declaration//GEN-END:variables
 }
